@@ -1,5 +1,4 @@
 <?
-echo "id : [";
 echo $name;
-echo "]";
+echo " welcome!";
 ?>
