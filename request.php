@@ -2,13 +2,11 @@
 error_reporting(E_ALL); 
 ini_set("display_errors", 1); 
 
-echo $there_is_no;
-
 $strout = "{ \"name\":";
 
 $name = $_REQUEST['name'];
 
-$strout .= "\"" . $name . "\"";
+$strout .= "\"" . $name . "\" ";
 
 echo $strout;
 
@@ -19,16 +17,21 @@ $dbhost = 'localhost:3306';
 
 $dblink = mysql_connect($dbhost, $dbuser, $dbpass) or die("System down");
 
+$strout .= "\"dbconnect\":";
+
+$strDB = "false";
+
 if($dblink)
-	echo "DB Connect";
+	$strDB = "true";
 else
-	echo "Failed DB Connect";
+	$strDB = "false";
 
 $db = mysql_select_db($dbbase, $dblink) or die("Database Down");
 
 if($db)
-	echo "DB Get";
+	$strDB = "true";
 else
-	echo "Failed DB Get";
+	$strDB = "false";
+$strDB .= "\"" . strDB . "\"} }";
 
 ?>
