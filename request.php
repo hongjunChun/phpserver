@@ -2,8 +2,7 @@
 
 $name = $_REQUEST['name'];
 
-echo $name;
-echo " welcome!";
+echo "한글테스트";
 
 $dbbase = 'projectcc';
 $dbuser = 'root';
