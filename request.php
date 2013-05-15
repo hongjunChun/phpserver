@@ -8,8 +8,6 @@ $name = $_REQUEST['name'];
 
 $strout .= "\"" . $name . "\" ";
 
-echo $strout;
-
 $dbbase = 'projectcc';
 $dbuser = 'root';
 $dbpass = 'root93.net';
@@ -32,6 +30,8 @@ if($db)
 	$strDB = "true";
 else
 	$strDB = "false";
-$strDB .= "\"" . strDB . "\"} }";
+$strout .= "\"" . $strDB . "\"} }";
+
+echo $strout;
 
 ?>
