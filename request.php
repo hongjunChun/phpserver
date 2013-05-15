@@ -1,8 +1,12 @@
 <?
 
+$strout = "{ \"name\":";
+
 $name = $_REQUEST['name'];
 
-echo "한글테스트";
+$strout .= "\"" . $name . "\"";
+
+echo $strout
 
 $dbbase = 'projectcc';
 $dbuser = 'root';
