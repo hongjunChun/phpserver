@@ -30,7 +30,7 @@ if($db)
 	$strDB = "true";
 else
 	$strDB = "false";
-$strout .= "\"" . $strDB . "\"} }";
+$strout .= "\"" . $strDB . "\"}";
 
 echo $strout;
 
