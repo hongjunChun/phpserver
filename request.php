@@ -6,7 +6,7 @@ $strout = "{ \"name\":";
 
 $name = $_REQUEST['name'];
 
-$strout .= "\"" . $name . "\" ";
+$strout .= "\"" . $name . "\", ";
 
 $dbbase = 'projectcc';
 $dbuser = 'root';
