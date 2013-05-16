@@ -38,7 +38,7 @@ echo $strout;
 $qry_rst = mysql_query("SELECT * FROM `projectcc`.`user_table`");
 $qry_row = mysql_fetch_array($qry_rst);
 
-echo $qry_row["nick"];
+echo "{ \"name\":\"" . $qry_row["name"] . "\", \"id\":\"" . $qry_row["nick"] . "\"}";
 
 mysql_close($dblink);
 
