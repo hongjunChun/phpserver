@@ -26,6 +26,10 @@ else
 
 $db = mysql_select_db($dbbase, $dblink) or die("Database Down");
 
+mysql_query("set session character_set_connection=utf8;");
+mysql_query("set session character_set_results=utf8;");
+mysql_query("set session character_set_client=utf8;");
+
 if($db)
 	$strDB = "true";
 else
